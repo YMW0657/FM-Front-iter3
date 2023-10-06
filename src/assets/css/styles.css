@@ -10903,8 +10903,13 @@ p {
   color: #fff;
   letter-spacing: 0.0625em;
 }
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+#mainNav .navbar-nav .nav-item .nav-link.active, 
+#mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #ffc800;
+}
+#mainNav .navbar-nav .nav-item .nav-link.btn-outline-warning.active, 
+#mainNav .navbar-nav .nav-item .nav-link.btn-outline-warning:hover{
+  color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -10943,6 +10948,7 @@ p {
   }
 }
 header.masthead {
+  height: 100vh;
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;

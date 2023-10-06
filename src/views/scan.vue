@@ -12,7 +12,7 @@
           :auto-size="{ minRows: 8, maxRows: 8 }"
         />
       </div>
-      <div class="btn-group">
+      <div class="btn-group1">
         <div class="btn" @click="startScanEvent.clearFn">Clear</div>
         <div class="btn" @click="startScanEvent.startScan">Submit</div>
       </div>
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="scan-title" style="text-align: right;">
-        <div style="color: #ef3c15;font-weight: bold;font-size: 24px;" v-if="startScanEvent.is_fraud">Oh no, this email seems like a scam email !We suggest you to report this email! <a href="/scam">Report?</a></div>
+        <div style="color: #ef3c15;font-weight: bold;font-size: 24px;" v-if="startScanEvent.result.is_fraud">Oh no, this email seems like a scam email !We suggest you to report this email! <a href="/scam">Report?</a></div>
         <div style="color: #00a900;font-weight: bold;font-size: 24px;" v-else>This email looks good, but you still need to pay attention!</div>
       </div>
     </div>
@@ -95,14 +95,14 @@
     padding:12px;
     background-color: #efefef;
   }
-  .btn-group{
+  .btn-group1{
     width:100%;
     margin:20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .btn-group .btn{
+  .btn-group1 .btn{
     width: 200px;
     height: 50px;
     text-align: center;
@@ -118,7 +118,7 @@
     justify-content: center;
     align-items: center;
   }
-  .btn-group .btn:hover{
+  .btn-group1 .btn:hover{
     background-color: #e0bd3c;
   }
   .scan-result{

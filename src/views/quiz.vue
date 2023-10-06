@@ -1,8 +1,8 @@
 <template>
   <div class="quiz">
     <div class="quiz-wrapper">
-      <a-progress :percent="((actions.quizIndex+1)*100)/12" />
-      <div class="progress"><span>{{ actions.quizIndex + 1 }}</span>/<span>12</span></div>
+      <a-progress :percent="((actions.quizIndex+1)*100)/9" />
+      <div class="progress1"><span>{{ actions.quizIndex + 1 }}</span>/<span>9</span></div>
       <div class="title">{{ actions.quizIndex+1 +"、"+ ourQuizs[actions.quizIndex].question }}</div>
       <div class="option">
         <ul>
@@ -38,13 +38,13 @@
         <a-button
           type="primary"
           class="next"
-          :disabled="actions.quizIndex==11"
+          :disabled="actions.quizIndex==8"
           @click="actions.nextFn">
             <template #icon>
               <RightOutlined />
             </template>
           </a-button>
-        <a-button type="primary" class="result" v-if="actions.quizIndex==11" @click="actions.showResult" :loading="actions.loading">{{actions.loading?"calculating...":"Result"}}</a-button>
+        <a-button type="primary" class="result" v-if="actions.quizIndex==8" @click="actions.showResult" :loading="actions.loading">{{actions.loading?"calculating...":"Result"}}</a-button>
       </div>
     </div>
     <!-- <div class="selection">
@@ -68,7 +68,7 @@
       </div>
       <div class="model-conclusion">
         <b>Conclusion: </b>
-        <span v-if="result.lists.filter(item=>!item.isGood).map(item=>item.name).length">You made more mistakes in the <span class="danger">{{result.lists.filter(item=>!item.isGood).map(item=>item.name).join(" and ")}}</span> scam category, It's recommended that you study more about this topic </span>
+        <span v-if="result.lists.filter(item=>!item.isGood).map(item=>item.name).length">You made more mistakes in the <a href="/dashboard"><span class="danger">{{result.lists.filter(item=>!item.isGood).map(item=>item.name).join(" and ")}}</span></a> scam category, It's recommended that you study more about this topic </span>
         <span v-if="result.lists.filter(item=>!item.isGood).map(item=>item.name).length&&result.lists.filter(item=>item.isGood).map(item=>item.name).length">,</span>
         <span v-if="result.lists.filter(item=>item.isGood).map(item=>item.name).length">You performed perfectly in the <span class="success">{{result.lists.filter(item=>item.isGood).map(item=>item.name).join(" and ")}}</span> categories, please keep it up.</span>
       </div>
@@ -91,7 +91,7 @@
     height: '30px',
     lineHeight: '30px',
   });
-  const types = [4, 4, 4];
+  const types = [3, 3, 3];
   const max = types.reduce((prev,next)=>prev+next);
   //const typeMaps = ["Email", "Phishing", "SMS", "Elder"];
   const typeMaps = ["Phishing", "Spoofing", "Card theft"];
@@ -209,13 +209,13 @@
     border-radius: 8px;
   }
 
-  .quiz-wrapper .progress{
+  .quiz-wrapper .progress1{
     text-align: center;
     margin-bottom: 20px;
     font-size: 30px;
     letter-spacing: 1px;
   }
-  .quiz-wrapper .progress span{
+  .quiz-wrapper .progress1 span{
   }
   .title{
     font-size: 24px;

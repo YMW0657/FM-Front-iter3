@@ -24,11 +24,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-              <li class="nav-item"><a class="nav-link" href="/">Main</a></li>
-              <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
-              <li class="nav-item"><a class="nav-link" href="/quiz">Quiz</a></li>
-              <li class="nav-item"><a class="nav-link" href="/scam">Report Scam</a></li>
-              <li class="nav-item"><a class="nav-link" href="/scan">Scan</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Main</a></li>
+            <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="/quiz">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="/scenario?id=1">Scenario</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-outline-warning" href="/scan">Scan</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-warning" href="/scam">Report Scam</a></li>
           </ul>
         </div>
       </div>
@@ -53,7 +54,6 @@
   };
   onMounted(()=>{
     selectedKeys.value = [route.name];
-    console.log(selectedKeys.value);
   })
 </script>
 <style scoped>

@@ -7,6 +7,7 @@ import dashboard from "@/views/dashboard.vue"
 import quiz from "@/views/quiz.vue"
 import scam from "@/views/scam.vue"
 import scan from "@/views/scan.vue"
+import scenario from "@/views/scenario.vue"
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -55,6 +56,12 @@ const router = createRouter({
           name: 'scan',
           component: scan,
           meta: { title: '/scan', hidden: false },
+        },
+        {
+          path: '/scenario',
+          name: 'scenario',
+          component: scenario,
+          meta: { title: '/scenario', hidden: false },
         }
       ]
     }

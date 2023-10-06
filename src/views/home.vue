@@ -23,7 +23,7 @@
       <!-- <div class="footer">
         <img class="left-logo" src="@/assets/img/img06.png" alt="">
       </div> -->
-      <header class="masthead" style="padding-top: 19.25rem;">
+      <header class="masthead">
         <div class="container">
             <div class="masthead-heading text-uppercase">Secure your personal information with ScamScan</div>
             <a class="btn btn-primary btn-xl text-uppercase" href="/dashboard">Act now!</a>
